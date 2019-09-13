@@ -44,6 +44,8 @@ helm update attestor jetstack/cert-manager \
 kubectl apply -f issuers/letsencrypt-issuer.yaml
 ```
 
+ref: [Supported issuer types](https://docs.cert-manager.io/en/latest/tasks/issuers/index.html#supported-issuer-types)
+
 ### 3.2 Issuing Certificates
 Certificates can be issued *manually* via `Certificate` resource ([example](examples/certificate.yaml)) or *automatically* for `Ingress` resources ([example](examples/ingress.yaml))
 
