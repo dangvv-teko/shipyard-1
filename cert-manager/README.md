@@ -38,6 +38,15 @@ helm update attestor jetstack/cert-manager \
 
 [ref](https://docs.cert-manager.io/en/latest/getting-started/install/kubernetes.html#steps)
 
-## 3. References
+## 3. Usage
+### 3.1 Create Issuer
+```bash
+kubectl apply -f issuers/letsencrypt-issuer.yaml
+```
+
+### 3.2 Issuing Certificates
+Certificates can be issued *manually* via `Certificate` resource ([example](examples/certificate.yaml)) or *automatically* for `Ingress` resources ([example](examples/ingress.yaml))
+
+## 4. References
 * Repo: https://github.com/jetstack/cert-manager
 * Docs: https://docs.cert-manager.io
