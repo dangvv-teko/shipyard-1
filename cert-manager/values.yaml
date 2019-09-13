@@ -8,19 +8,13 @@ prometheus:
   servicemonitor:
     enabled: true
 
-resources:
+resources: &resources
   requests:
     cpu: 10m
     memory: 32Mi
 
 webhook:
-  resources:
-    requests:
-      cpu: 10m
-      memory: 32Mi
+  resources: *resources
 
 cainjector:
-  resources:
-    requests:
-      cpu: 10m
-      memory: 32Mi
+  resources: *resources
