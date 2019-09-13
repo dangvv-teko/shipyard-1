@@ -26,13 +26,13 @@ helm repo update
 
 # Install the cert-manager Helm chart
 helm install \
-  --name attestor \
+  --name cert-manager \
   --namespace cert-manager \
   --version v0.10.0 \
   --values values.yaml \
   jetstack/cert-manager
 ## or ##
-helm update attestor jetstack/cert-manager \
+helm update cert-manager jetstack/cert-manager \
   --values values.yaml
 ```
 
