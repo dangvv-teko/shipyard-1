@@ -70,7 +70,7 @@ The default installation is intended to suit monitoring a kubernetes cluster the
             <li><code>etcd</code></li>
             <li><code>kube-dns</code> / <code>coredns</code></li>
             <li><code>kube-proxy</code></li>
-            <li><code>kubelet</code></li>
+            <li><code>kubelet</code><sup>1</sup></li>
             </br>
             <li><code>kube-state-metrics</code></li>
             <li><code>node-exporter</code></li>
@@ -101,3 +101,14 @@ helm install stable/prometheus-operator \
 helm upgrade argus stable/prometheus-operator \
     --values=values.yaml
 ```
+
+### 2.3 PostInstall
+
+## 3. Problems
+* <sup>1</sup> : `PrometheusOperator` create service `kube-system/argus-promops-kubelet` while running and it's NOT managed by helm.
+* `Prometheus` data is not persistence, yet. Consider using [`Thanos`](https://thanos.io/).
+
+## 4. References
+* `prometheus` [home](https://prometheus.io)
+* `prometheus-operator` [repo](https://github.com/coreos/prometheus-operator)
+* [`kube-prometheus`](https://github.com/coreos/kube-prometheus): collection of Kubernetes manifests, Grafana dashboards, and Prometheus rules
