@@ -22,3 +22,71 @@
   + Helm chart: v6.11
 
 ### 2.2 Components
+The default installation is intended to suit monitoring a kubernetes cluster the chart is deployed onto. It closely matches the kube-prometheus project. With the installation, the chart also includes dashboards and alerts.
+
+<table>
+  <tr>
+    <th>Components</th>
+    <th>Installed</th>
+    <th>Note</th>
+  </tr>
+  <tr>
+    <td><code>prometheus-operator</code></td>
+    <td align="center">✓</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>prometheus</code></td>
+    <td align="center">✓</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>alertmanager</code></td>
+    <td align="center">✓</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>node-exporter</code></td>
+    <td align="center">✓</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>kube-state-metrics</code></td>
+    <td align="center">✓</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>grafana</code></td>
+    <td align="center">✗</td>
+    <td>via <code>Grafana Operator</code> instead</td>
+  </tr>
+  <tr>
+    <td>
+        <b>ServiceMonitors</b> to scrape internal kubernetes components
+        <ul>
+            <li><code>kube-apiserver</code></li>
+            <li><code>kube-scheduler</code></li>
+            <li><code>kube-controller-manager</code></li>
+            <li><code>etcd</code></li>
+            <li><code>kube-dns</code> / <code>coredns</code></li>
+            <li><code>kube-proxy</code></li>
+            <li><code>kubelet</code></li>
+            </br>
+            <li><code>kube-state-metrics</code></li>
+            <li><code>node-exporter</code></li>
+            </br>
+            <li><code>prometheus-operator</code></li>
+            <li><code>prometheus</code></li>
+            <li><code>alertmanager</code></li>
+            <li><code>grafana</code></li>
+        </ul>
+    </td>
+    <td align="center">✓</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>default <b>Grafana Dashboards</b></td>
+    <td align="center">✗</td>
+    <td>install <a href="https://github.com/helm/charts/tree/master/stable/prometheus-operator/templates/grafana/dashboards-1.14">manually</a></td>
+  </tr>
+</table>
