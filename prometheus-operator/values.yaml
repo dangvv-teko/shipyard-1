@@ -1,18 +1,31 @@
 nameOverride: promops
 
+##### grafana #####
 grafana:
   enabled: true
 
+##### prometheus-operator #####
 prometheusOperator:
   priorityClassName: addons-critical
 prometheus:
+  podDisruptionBudget:
+    enabled: true
   prometheusSpec:
     priorityClassName: addons-critical
 alertmanager:
+  podDisruptionBudget:
+    enabled: true
   alertmanagerSpec:
     priorityClassName: addons-critical
 
+##### kube-state-metrics #####
 kube-state-metrics:
   priorityClassName: addons-critical
+  podSecurityPolicy:
+    enabled: true
+  # prometheus.monitor.enabled
+
+##### prometheus-node-exporter #####
 prometheus-node-exporter:
   priorityClassName: addons-critical
+  # prometheus.monitor.enabled
