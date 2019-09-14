@@ -1,7 +1,6 @@
 <img src="https://github.com/cncf/artwork/raw/master/projects/prometheus/icon/color/prometheus-icon-color.svg?sanitize=true"
-    alt="cert-manager logo"
+    alt="prometheus logo"
     align="right" height="128"/>
-
 
 `prometheus-operator`
 =====================
