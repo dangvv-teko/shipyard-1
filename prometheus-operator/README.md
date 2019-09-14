@@ -90,3 +90,14 @@ The default installation is intended to suit monitoring a kubernetes cluster the
     <td>install <a href="https://github.com/helm/charts/tree/master/stable/prometheus-operator/templates/grafana/dashboards-1.14">manually</a></td>
   </tr>
 </table>
+
+### 2.2 Installation
+```bash
+helm install stable/prometheus-operator \
+    --name=argus \
+    --namespace=kube-monitor \
+    --values=values.yaml
+### or ###
+helm upgrade argus stable/prometheus-operator \
+    --values=values.yaml
+```

@@ -1,0 +1,18 @@
+nameOverride: promops
+
+grafana:
+  enabled: true
+
+prometheusOperator:
+  priorityClassName: addons-critical
+prometheus:
+  prometheusSpec:
+    priorityClassName: addons-critical
+alertmanager:
+  alertmanagerSpec:
+    priorityClassName: addons-critical
+
+kube-state-metrics:
+  priorityClassName: addons-critical
+prometheus-node-exporter:
+  priorityClassName: addons-critical
