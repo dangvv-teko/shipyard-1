@@ -2,15 +2,15 @@
     alt="cert-manager logo"
     align="right" height="128"/>
 
-cert-manager
-============
-`cert-manager` is a native Kubernetes certificate management controller. It can help with issuing certificates from a variety of sources, such as [Let’s Encrypt](https://letsencrypt.org/), [HashiCorp Vault](https://vaultproject.io/), [Venafi](https://venafi.com/), a simple signing keypair, or self signed.
+`cert-manager`
+==============
+**cert-manager** is a native Kubernetes certificate management controller. It can help with issuing certificates from a variety of sources, such as [Let’s Encrypt](https://letsencrypt.org/), [HashiCorp Vault](https://vaultproject.io/), [Venafi](https://venafi.com/), a simple signing keypair, or self signed.
 
 ## 1. Info
 * Kubernetes: v1.13+
 * Helm: v2.x
 * cert-manager: v0.10
-  + Helm release: v0.10+
+  + Helm chart: v0.10+
 
 ## 2. Deployment
 ```bash
