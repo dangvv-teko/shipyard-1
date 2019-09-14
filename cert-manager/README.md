@@ -36,7 +36,7 @@ helm update cert-manager jetstack/cert-manager \
   --values values.yaml
 ```
 
-[ref](https://docs.cert-manager.io/en/latest/getting-started/install/kubernetes.html#steps)
+* [ref](https://docs.cert-manager.io/en/latest/getting-started/install/kubernetes.html#steps)
 
 ## 3. Usage
 ### 3.1 Create Issuer
@@ -44,10 +44,12 @@ helm update cert-manager jetstack/cert-manager \
 kubectl apply -f issuers/letsencrypt-issuer.yaml
 ```
 
-ref: [Supported issuer types](https://docs.cert-manager.io/en/latest/tasks/issuers/index.html#supported-issuer-types)
+* ref: [Supported issuer types](https://docs.cert-manager.io/en/latest/tasks/issuers/index.html#supported-issuer-types)
 
 ### 3.2 Issuing Certificates
-Certificates can be issued *manually* via `Certificate` resource ([example](examples/certificate.yaml)) or *automatically* for `Ingress` resources ([example](examples/ingress.yaml))
+Certificates can be issued
+* *manually* via `Certificate` resource <sup>[(e.g.)](examples/certificate.yaml)</sup> or
+* *automatically* for `Ingress` resources <sup>[(e.g.)](examples/ingress.yaml)</sup>
 
 ## 4. References
 * Repo: https://github.com/jetstack/cert-manager
