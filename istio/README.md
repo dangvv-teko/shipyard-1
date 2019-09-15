@@ -189,3 +189,13 @@
 * `prometheus`
 * `grafana`
 * `jaeger`
+
+### 2.3 Installation methods
+Istio support multiple install methods:
+* [Quick Start Evaluation Install](https://istio.io/docs/setup/install/kubernetes/) using pre-generated kubernetes manifest files
+* [Customizable Install with Helm](https://istio.io/docs/setup/install/helm/)
+  * Option 1: using `helm template` to generate manifests then `kubectl apply`
+  * Option 2: Install with Helm and Tiller via `helm install`
+* The [Istio Operator](https://istio.io/docs/setup/install/operator/) offers a new method of installing Istio using a one-line command.
+  * Option 1: Using `istioctl experimental manifest apply`
+  * Option 2: Using CRD `install.istio.io/IstioControlPlane`
