@@ -1,0 +1,60 @@
+##### Core Components configs #####
+gateways:     # gateways feature
+  enabled: true
+  istio-ingressgateway:
+    enabled: true
+  istio-egressgateway:
+    enabled: true
+
+sidecarInjectorWebhook: # auto-injection feature
+  enabled: true
+
+galley:       # configuration-management feature
+  enabled: true
+
+mixer:
+  policy:     # policy feature
+    enabled: true
+  telemetry:  # telemetry feature
+    enabled: true
+
+pilot:        # traffic-management feature
+  enabled: true
+  traceSampling: 100.0
+
+security:     # citadel component
+  enabled: true
+
+nodeagent:    # security feature
+  enabled: false
+
+##### Addons configs #####
+grafana:      # telemetry feature
+  enabled: false
+
+prometheus:   # telemetry feature
+  enabled: false
+
+tracing:      # telemetry feature
+  enabled: false
+
+kiali:        # telemetry feature
+  enabled: false
+
+certmanager:  # security feature
+  enabled: false
+
+istio_cni:    # 3rd party feature
+  enabled: false
+
+istiocoredns: # 3rd party feature
+  enabled: false
+
+##### Global configs #####
+global:
+  tracer:
+    zipkin:
+      address: foobar-jaeger-query.default.svc:9411
+
+  # fine-grained configs
+  priorityClassName: addons-critical

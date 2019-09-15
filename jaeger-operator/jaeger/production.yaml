@@ -25,7 +25,7 @@ spec:
   ### Networking configs
   # ingress: {} # Kubernetes Ingress
 
-  ### Finer grained configs
+  ### Finer-grained configs
   # ref: https://www.jaegertracing.io/docs/1.14/operator/#finer-grained-configuration
   # annotations: {}
   # labels: {}
