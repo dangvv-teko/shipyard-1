@@ -51,7 +51,8 @@
   <tr>
     <td>
         <code>istio-policy</code>
-        <small>(apart of mixer)</small>
+        </br>
+        <sup> (apart of mixer)</sup>
     </td>
     <td align="center">✓</td>
     <td><code>mixer</code></td>
@@ -60,7 +61,8 @@
   <tr>
     <td>
         <code>istio-telemetry</code>
-        <small>(apart of mixer)</small>
+        </br>
+        <sup> (apart of mixer)</sup>
     </td>
     <td align="center">✓</td>
     <td><code>mixer</code></td>
@@ -150,3 +152,15 @@
     <td><code>istiocoredns</code></td>
   </tr>
 </table>
+
+**Referenes**:
+* [config-profiles](https://istio.io/docs/setup/additional-setup/config-profiles/)
+* [in-tree Helm charts](https://github.com/istio/istio/tree/1.3.0/install/kubernetes/helm)
+* [istio/installer](https://github.com/istio/installer/tree/release-1.3)
+
+**Note**: The following components are install in seperated releases:
+* `kiali`
+* `cert-manager`
+* `prometheus`
+* `grafana`
+* `jaeger`
