@@ -154,9 +154,10 @@
 </table>
 
 **Referenes**:
-* [config-profiles](https://istio.io/docs/setup/additional-setup/config-profiles/)
+* [config-profiles](https://istio.io/docs/setup/additional-setup/config-profiles/)*
 * [in-tree Helm charts](https://github.com/istio/istio/tree/1.3.0/install/kubernetes/helm)
 * [istio/installer](https://github.com/istio/installer/tree/release-1.3)
+* [istio-operator Architecture](https://github.com/istio/operator/blob/master/ARCHITECTURE.md)*
 
 **Note**: The following components are install in seperated releases:
 * `kiali`
