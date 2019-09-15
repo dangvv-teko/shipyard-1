@@ -19,36 +19,48 @@
 ### 2.2 Components
 <table>
   <tr>
+    <th>Feature</th>
     <th>Components</th>
     <th align="center">Installed</th>
     <th>Helm path</th>
     <th>Operator path</th>
   </tr>
   <tr>
-    <td><b>Core components</b></td>
+    <td>Base</td>
+    <td>CRDs</td>
+    <td align="center">✓<br></td>
+    <td>// separated chart</br><code>istio-init</code></td>
+    <td><code>crds</code></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Core components</b></td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
+    <td>Security</td>
     <td><code>istio-citadel</code></td>
     <td align="center">✓<br></td>
     <td><code>security</code></td>
     <td><code>security/citadel</code></td>
   </tr>
   <tr>
+    <td width="128">Configuration Management</td>
     <td><code>istio-galley</code></td>
     <td align="center">✓</td>
     <td><code>galley</code></td>
     <td><code>istio-control/istio-config</code></td>
   </tr>
   <tr>
+    <td width="128">Traffic Management</td>
     <td><code>istio-pilot</code></td>
     <td align="center">✓</td>
     <td><code>pilot</code></td>
     <td><code>istio-control/istio-discovery</code></td>
   </tr>
   <tr>
+    <td>Policy</td>
     <td>
         <code>istio-policy</code>
         </br>
@@ -59,6 +71,7 @@
     <td><code>istio-policy</code></td>
   </tr>
   <tr>
+    <td>Telemetry</td>
     <td>
         <code>istio-telemetry</code>
         </br>
@@ -69,83 +82,94 @@
     <td><code>istio-telemetry/mixer-telemetry</code></td>
   </tr>
   <tr>
+    <td>AutoInjection</td>
     <td><code>istio-sidecar-injector</code></td>
     <td align="center">✓</td>
     <td><code>sidecarInjectorWebhook</code></td>
     <td><code>istio-control/istio-autoinject</code></td>
   </tr>
   <tr>
+    <td>Security</td>
     <td><code>istio-nodeagent</code></td>
     <td align="center">?</td>
     <td><code>nodeagent</code></td>
     <td><code>security/nodeagent</code></td>
   </tr>
   <tr>
+    <td>Gateways</td>
     <td><code>istio-ingressgateway</code></td>
     <td align="center">✓</td>
     <td><code>gateways</code></td>
     <td><code>gateways/istio-ingress</code></td>
   </tr>
   <tr>
+    <td>Gateways</td>
     <td><code>istio-egressgateway</code></td>
     <td align="center">?</td>
     <td><code>gateways</code></td>
     <td><code>gateways/istio-egress</code></td>
   </tr>
   <tr>
-    <td><b>Addons</b></td>
+    <td colspan="2" align="center"><b>Addons</b></td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
+    <td>Telemetry</td>
     <td><code>kiali</code></td>
     <td align="center">✗</td>
     <td><code>kiali</code></td>
     <td><code>istio-telemetry/kiali</code></td>
   </tr>
   <tr>
+    <td>Security</td>
     <td><code>cert-manager</code></td>
     <td align="center">✗</td>
     <td><code>certmanager</code></td>
     <td><code>security/certmanager</code></td>
   </tr>
   <tr>
+    <td>Telemetry</td>
     <td><code>prometheus</code></td>
     <td align="center">✗</td>
     <td><code>prometheus</code></td>
     <td>
-        <code>istio-telemetry/prometheus</code>
-        </br>
-        <code>istio-telemetry/prometheus-operator</code>
+      * <code>istio-telemetry/prometheus</code>
+      </br>
+      * <code>istio-telemetry/prometheus-operator</code>
     </td>
   </tr>
   <tr>
+    <td>Telemetry</td>
     <td><code>grafana</code></td>
     <td align="center">✗</td>
     <td><code>grafana</code></td>
     <td><code>istio-telemetry/grafana</code></td>
   </tr>
   <tr>
+    <td>Telemetry</td>
     <td>
-        tracing (supported providers)
-        <ul>
-            <li><code>jaeger</code></li>
-            <li><code>zipkin</code></li>
-            <li><code>opencensus</code></li>
-        </ul>
+      tracing (supported providers)
+      <ul>
+        <li><code>jaeger</code></li>
+        <li><code>zipkin</code></li>
+        <li><code>opencensus</code></li>
+      </ul>
     </td>
     <td align="center">✗</td>
     <td><code>tracing</code></td>
     <td><code>istio-telemetry/tracing</code></td>
   </tr>
   <tr>
+    <td>3rd Party</td>
     <td><code>istio-cni</code></td>
     <td align="center">?</td>
-    <td>// separated chart </td>
+    <td>// separated chart</br><code>istio-cni</code></td>
     <td><code>istio-cni</code></td>
   </tr>
   <tr>
+    <td>3rd Party</td>
     <td><code>istio-coredns</code></td>
     <td align="center">?</td>
     <td><code>istiocoredns</code></td>
