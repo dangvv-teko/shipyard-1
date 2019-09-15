@@ -22,6 +22,7 @@ The **Jaeger Operator** is an implementation of a Kubernetes Operator that used 
   + Helm chart: v2.9
 
 ### 2.2 Installation
+#### 2.2.1 Install `jaeger-operator`
 ```bash
 helm install stable/jaeger-operator \
     --name=foobar \
@@ -31,6 +32,14 @@ helm install stable/jaeger-operator \
 helm upgrade foobar stable/jaeger-operator \
     --values=values.yaml
 ```
+
+#### 2.2.2 Install `jaeger`
+Jaeger support multiple deployment strategies. The strategy is defined in the custom resource file, and determines the architecture to be used for the Jaeger backend.
+* `allInOne` strategy: use example in `jaeger/simplest.yaml`
+* `production` strategy: use example in `jaeger/production.yaml`
+* `streaming` strategy: //TODO
+
+For more information, see [docs here](https://jaegertracing.io/docs/1.14/deployment/)
 
 ## 3. References
 * `Jaeger` [home](https://jaegertracing.io) | [repo](https://github.com/jaegertracing/jaeger)
