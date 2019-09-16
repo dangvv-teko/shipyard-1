@@ -2,6 +2,7 @@ controller:
   service:
     enabled: true
     type: LoadBalancer
+    loadBalancerIP: 11.22.33.44 # Your reserve static IP
     annotations:
       # TODO: Create container-native load balancing
       # But now it only supports gce-ingress.
