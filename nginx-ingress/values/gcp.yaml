@@ -1,0 +1,10 @@
+controller:
+  service:
+    enabled: true
+    type: LoadBalancer
+    annotations:
+      # TODO: Create container-native load balancing
+      # But now it only supports gce-ingress.
+      # See: https://cloud.google.com/kubernetes-engine/docs/how-to/container-native-load-balancing
+      # cloud.google.com/neg: '{"ingress": true}'
+      cloud.google.com/neg: '{"ingress": true}'
