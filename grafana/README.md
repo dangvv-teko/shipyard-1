@@ -25,5 +25,7 @@ helm upgrade grafana stable/grafana \
 ```
 
 ## 2. Well-known dashboards
-* [`kubernetes-mixin`](https://github.com/kubernetes-monitoring/kubernetes-mixin/)
+* [`kubernetes-monitoring/kubernetes-mixin`](https://github.com/kubernetes-monitoring/kubernetes-mixin/): Kubernetes Infra dashboards
+* [`povilasv/kubernetes-grafana-mixin`](https://github.com/povilasv/kubernetes-grafana-mixin): Kubernetes Control Plan dashboards. [ref](https://povilasv.me/grafana-dashboards-for-kubernetes-administrators/)
+* [Istio Control Plan dashboards](https://github.com/istio/istio/tree/master/install/kubernetes/helm/istio/charts/grafana/dashboards)
 * [NGINX Ingress controller](https://grafana.com/grafana/dashboards/9614) | [source](https://github.com/kubernetes/ingress-nginx/tree/master/deploy/grafana/dashboards)
