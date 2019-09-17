@@ -111,3 +111,4 @@ helm upgrade argus stable/prometheus-operator \
 * `prometheus` [home](https://prometheus.io)
 * `prometheus-operator` [repo](https://github.com/coreos/prometheus-operator)
 * [`kube-prometheus`](https://github.com/coreos/kube-prometheus): collection of Kubernetes manifests, Grafana dashboards, and Prometheus rules
+* [`kubernetes-mixin`](https://github.com/kubernetes-monitoring/kubernetes-mixin): A set of Grafana dashboards and Prometheus alerts for Kubernetes.
