@@ -1,0 +1,61 @@
+##### Kubernetes configuration #####
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    # kubernetes.io/ingress.class: nginx
+  tls:
+  - secretName: "monitor.kites.rocks-tls"
+    hosts:
+    - "monitor.kites.rocks"
+  hosts:
+  - "monitor.kites.rocks"
+
+priorityClassName: addons-critical
+
+##### Grafana configuration #####
+grafana.ini:
+  server:
+    domain:   monitor.kites.rocks
+    root_url: https://monitor.kites.rocks
+  database:
+    type:     postgres
+    host:     postgres:5432
+    name:     grafana-database
+    user:     grafana-username
+    password: grafana-password
+  smtp:
+    # Gmail:    https://support.google.com/a/answer/176600?hl=en
+    # SendGrid: https://sendgrid.com/docs/API_Reference/SMTP_API/getting_started_smtp.html
+    enabled: true
+    host:         smtp.gmail.com:587
+    user:         devops@kites.rocks
+    password:     supersecret
+    from_name:    Grafana
+    from_address: devops@kites.rocks
+
+# ldap: {}
+# smtp: {}
+
+# plugins: []
+# notifiers: {}
+datasources:
+  datasources.yaml:
+    apiVersion: 1
+    datasources:
+    - name: Prometheus
+      type: prometheus
+      url: http://prometheus:9090
+      access: proxy
+      isDefault: true
+# dashboardProviders: {}
+# dashboards: {}
+# dashboardsConfigMaps: {}
+
+##### Sidecar configuration #####
+# sidecar:
+#   dashboards:
+#     enabled: true
+#     folder: /var/lib/grafana/dashboards/default
+#   datasources:
+#     enabled: true
