@@ -1,0 +1,31 @@
+backend:
+  type: es
+  es:
+    host:         elasticsearch.host
+    http_user:    fluentbit
+    http_passwd:  secure-password-for-fluetbit
+
+input:
+  systemd:
+    enabled: true
+
+filter:
+  mergeLogKey: payload
+
+extraEntries:
+  input:
+    DB              /tail-db/systemd-services-state.db
+
+trackOffsets: true
+
+image:
+  fluent_bit:
+    tag: 1.2-debug
+rbac:
+  pspEnabled: true
+metrics:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+fullnameOverride: tivan-fluentbit
+priorityClassName: addons-critical
