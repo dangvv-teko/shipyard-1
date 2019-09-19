@@ -3,7 +3,7 @@ backend:
   es:
     host:         elasticsearch.host
     http_user:    fluentbit
-    http_passwd:  secure-password-for-fluetbit
+    http_passwd:  fluentbit-secure-password
 
 input:
   systemd:

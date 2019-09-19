@@ -21,6 +21,8 @@ spec:
     options:
       es:
         server-urls: http://elasticsearch.host:9200
+        username: jaeger
+        password: jaeger-secure-password
 
   ### Networking configs
   # ingress: {} # Kubernetes Ingress
