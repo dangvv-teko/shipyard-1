@@ -20,9 +20,40 @@ helm repo update
 
 helm install elastic/kibana \
   --name tivan-kibana \
-  --namespace kube-monitor \
+  --namespace kube-logging \
   --values values.yaml
 ## or ##
 helm upgrade tivan-kibana elastic/kibana \
   --values values.yaml
+```
+
+### 1.3 Post-installation
+
+* Setup roles
+```
+ROLE     logs_system
+  Elasticsearch
+    Cluster privileges:
+    Run As privileges:
+    Index privileges:
+        kubernetes_cluster-* :  create_index, write
+
+ROLE     logs_user
+  Elasticsearch
+    Cluster privileges: monitor
+    Run As privileges:
+    Index privileges:
+        kubernetes_cluster-* :  read, monitor, view_index_metadata
+  Kibana
+    Discover:   Read
+    Visualize:  Read
+    Dashboard:  Read
+    Dev Tools:  Read
+```
+
+* Setup users
+```
+USER     fluentbit
+PASSWORD secure-password-for-fluetbit
+ROLE     logs_system
 ```

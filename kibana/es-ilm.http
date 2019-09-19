@@ -1,0 +1,81 @@
+# blog: https://www.elastic.co/blog/implementing-hot-warm-cold-in-elasticsearch-with-index-lifecycle-management
+# docs: https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html
+# sample: https://www.elastic.co/guide/en/elasticsearch/reference/current/_full_policy.html
+PUT _ilm/policy/logs_policy
+{
+  "policy": {
+    "phases": {
+      "hot": {
+        "actions": {
+          "set_priority": {
+            "priority": 1024
+          }
+        }
+      },
+      "delete": {
+        "min_age": "7d",
+        "actions": {
+          "delete": {}
+        }
+      }
+    }
+  }
+}
+
+PUT _ilm/policy/logs_policy
+{
+  "policy": {
+    "phases": {
+      "hot": {
+        "actions": {
+          "set_priority": {
+            "priority": 1024
+          }
+        }
+      },
+      "warm": {
+        "min_age": "3d",
+        "actions": {
+          "set_priority": {
+            "priority": 512
+          },
+          "forcemerge": {
+            "max_num_segments": 1
+          },
+          "readonly": {}
+        }
+      },
+      "cold": {
+        "min_age": "7d",
+        "actions": {
+          "set_priority": {
+            "priority": null
+          },
+          "freeze": {}
+        }
+      },
+      "delete": {
+        "min_age": "15d",
+        "actions": {
+          "delete": {}
+        }
+      }
+    }
+  }
+}
+
+# docs: https://www.elastic.co/guide/en/elasticsearch/reference/current/applying-policy-to-template.html
+# index settings: https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules.html
+PUT _template/logs_template
+{
+  "index_patterns": ["kubernetes_cluster-*"], 
+  "settings": {
+    "index.lifecycle.name": "logs_policy"
+  }
+}
+
+# update existing indices
+PUT kubernetes_cluster-*/_settings
+{
+  "index.lifecycle.name": "logs_policy"
+}
