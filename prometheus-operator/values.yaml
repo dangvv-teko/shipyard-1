@@ -2,7 +2,7 @@ nameOverride: promops
 
 ##### grafana #####
 grafana:
-  enabled: true
+  enabled: false
 
 ##### prometheus-operator #####
 prometheusOperator:
