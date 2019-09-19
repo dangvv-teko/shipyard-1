@@ -27,5 +27,5 @@ metrics:
   enabled: true
   serviceMonitor:
     enabled: true
-fullnameOverride: tivan-fluentbit
+nameOverride: tivan
 priorityClassName: addons-critical

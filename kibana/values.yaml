@@ -1,5 +1,7 @@
-fullnameOverrid: tivan-kibana
+nameOverride: tivan
 priorityClassName: addons-critical
+# image: docker.elastic.co/kibana/kibana
+# imageTag: 6.8.3
 
 elasticsearchHosts: http://elasticsearch.host:9200
 kibanaConfig:
