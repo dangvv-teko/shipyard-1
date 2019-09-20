@@ -54,7 +54,7 @@ istiocoredns: # 3rd party feature
 global:
   tracer:
     zipkin:
-      address: foobar-jaeger-query.default.svc:9411
+      address: jaeger-collector.host:9411
 
   # fine-grained configs
   priorityClassName: addons-critical

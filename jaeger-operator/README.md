@@ -24,11 +24,11 @@ The **Jaeger Operator** is an implementation of a Kubernetes Operator that used 
 #### 2.2.1 Install `jaeger-operator`
 ```bash
 helm install stable/jaeger-operator \
-    --name=foobar \
+    --name=theseus \
     --namespace=kube-tracing \
     --values=values.yaml
 ### or ###
-helm upgrade foobar stable/jaeger-operator \
+helm upgrade theseus stable/jaeger-operator \
     --values=values.yaml
 ```
 
