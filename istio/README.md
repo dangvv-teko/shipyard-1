@@ -214,5 +214,8 @@ kubectl apply -f https://github.com/istio/istio/raw/1.3.0/install/kubernetes/hel
 kubectl apply -f https://github.com/istio/istio/raw/1.3.0/install/kubernetes/namespace.yaml
 
 # Install Istio ControlPlan
-helm install istio.io/istio --name=istio --namespace=istio-system --values=helm-values.yaml
+helm install istio.io/istio \
+    --name=istio \
+    --namespace=istio-system \
+    --values=values.yaml
 ```
