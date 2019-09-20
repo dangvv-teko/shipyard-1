@@ -25,7 +25,10 @@ spec:
         password: jaeger-secure-password
 
   ### Networking configs
-  # ingress: {} # Kubernetes Ingress
+  ingress:
+    # Kubernetes Ingress disable for now
+    # Because alot of features are missing
+    enabled: false
 
   ### Finer-grained configs
   # ref: https://www.jaegertracing.io/docs/1.14/operator/#finer-grained-configuration
@@ -38,3 +41,24 @@ spec:
   # securityContext: {}
   # volumeMounts: []
   # volumes: []
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/tls-acme: "true"
+  labels:
+    app: theseus-jaeger
+  name: theseus-jaeger
+spec:
+  rules:
+  - host: tracing.kites.rocks
+    http:
+      paths:
+      - backend:
+          serviceName: theseus-jaeger-query
+          servicePort: 16686
+  tls:
+  - hosts:
+    - tracing.kites.rocks
+    secretName: tracing.kites.rocks-tls
