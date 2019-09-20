@@ -110,6 +110,17 @@
     <td><code>gateways/istio-egress</code></td>
   </tr>
   <tr>
+    <td>Gateways</td>
+    <td>
+        <code>istio-ilbgateway</code>
+        </br>
+        <sup> (Mesh InternalLoadBalancer gateway)</sup>
+    </td>
+    <td align="center">?</td>
+    <td><code>gateways</code></td>
+    <td>---</td>
+  </tr>
+  <tr>
     <td colspan="2" align="center"><b>Addons</b></td>
     <td></td>
     <td></td>
