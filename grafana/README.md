@@ -30,3 +30,4 @@ helm upgrade grafana stable/grafana \
 * [Istio Control Plan dashboards](https://github.com/istio/istio/tree/master/install/kubernetes/helm/istio/charts/grafana/dashboards)
 * [NGINX Ingress controller](https://grafana.com/grafana/dashboards/9614) | [source](https://github.com/kubernetes/ingress-nginx/tree/master/deploy/grafana/dashboards)
 * [Percona dashboards](https://github.com/percona/grafana-dashboards) for MySQL, MongoDB,...
+* [Thanos dashboards](https://github.com/thanos-io/kube-thanos/tree/master/jsonnet/thanos-mixin)
