@@ -44,3 +44,8 @@ helm init --service-account tiller
 # References
 * Helm [home](https://helm.sh/) | [repo](https://github.com/helm)
 * [Helm Hub](https://hub.helm.sh/)
+* Helm plugins: [docs](https://helm.sh/docs/plugins/)
+  * [s3](https://github.com/hypnoglow/helm-s3)
+  * [gcs](https://github.com/hayorov/helm-gcs)
+  * [git](https://github.com/aslafy-z/helm-git)
+  * [2to3](https://github.com/helm/helm-2to3)
