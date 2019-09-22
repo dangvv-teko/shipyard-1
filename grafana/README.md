@@ -28,6 +28,13 @@ helm upgrade grafana stable/grafana \
 * [`kubernetes-monitoring/kubernetes-mixin`](https://github.com/kubernetes-monitoring/kubernetes-mixin/): Kubernetes Infra dashboards
 * [`povilasv/kubernetes-grafana-mixin`](https://github.com/povilasv/kubernetes-grafana-mixin): Kubernetes Control Plan dashboards. [ref](https://povilasv.me/grafana-dashboards-for-kubernetes-administrators/)
 * [Istio Control Plan dashboards](https://github.com/istio/istio/tree/master/install/kubernetes/helm/istio/charts/grafana/dashboards)
+* [`grafana/jsonnet-libs`](https://github.com/grafana/jsonnet-libs)
+  * consul-mixin
+  * jaeger-mixin
+  * memcached-mixin
 * [NGINX Ingress controller](https://grafana.com/grafana/dashboards/9614) | [source](https://github.com/kubernetes/ingress-nginx/tree/master/deploy/grafana/dashboards)
 * [Percona dashboards](https://github.com/percona/grafana-dashboards) for MySQL, MongoDB,...
-* [Thanos dashboards](https://github.com/thanos-io/kube-thanos/tree/master/jsonnet/thanos-mixin)
+* [`thanos-mixin`](https://github.com/thanos-io/kube-thanos/tree/master/jsonnet/thanos-mixin)
+* [`etcd-mixin`](https://github.com/etcd-io/etcd/tree/master/Documentation/etcd-mixin)
+----------
+* ref: [Everything You Need to Know About Monitoring Mixins](https://grafana.com/blog/2018/09/13/everything-you-need-to-know-about-monitoring-mixins/)
