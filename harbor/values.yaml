@@ -1,0 +1,40 @@
+externalURL: https://hub.kites.rocks
+# logLevel: warning # TODO: change registry cm to `level: warn`
+secretKey: 16CharsSecretKey # Must be a string of 16 chars.
+
+expose:
+  type: ingress
+  tls:
+    enabled: true
+    # if `secretName` is `null` or empty (`""`), helm will auto generate self-signed certificate
+    # with name `{{harbor.fullname}}-ingress` or `{{harbor.fullname}}-nginx`
+    secretName:       "kites.rocks-tls"
+    # By default, the Notary service will use the same cert and key as described above.
+    # Only needed when the type is "ingress".
+    notarySecretName: "kites.rocks-tls"
+  ingress:
+    hosts:
+      core:   hub.kites.rocks
+      notary: notary.kites.rocks
+    annotations:
+      kubernetes.io/tls-acme: "true"
+
+# persistence:
+#   imageChartStorage:
+#     type: gcs
+#     gcs:
+#       bucket: "harbor-bucket"
+#       encodedkey: "base64-encoded-service-account-json-key-file"
+
+# database:
+#   type: external
+#   external:
+#     host: "postgresql.host"
+#     port: "5432"
+#     username: "harbor-username"
+#     password: "harbor-password"
+#     coreDatabase:  "registry"
+#     clairDatabase: "clair"
+#     notaryServerDatabase: "notary_server"
+#     notarySignerDatabase: "notary_signer"
+#     sslmode: "disable"
