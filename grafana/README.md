@@ -28,6 +28,7 @@ helm upgrade grafana stable/grafana \
 * [`kubernetes-monitoring/kubernetes-mixin`](https://github.com/kubernetes-monitoring/kubernetes-mixin/): Kubernetes Infra dashboards
 * [`povilasv/kubernetes-grafana-mixin`](https://github.com/povilasv/kubernetes-grafana-mixin): Kubernetes Control Plan dashboards. [ref](https://povilasv.me/grafana-dashboards-for-kubernetes-administrators/)
 * [Istio Control Plan dashboards](https://github.com/istio/istio/tree/master/install/kubernetes/helm/istio/charts/grafana/dashboards)
+* [`grafana/grafonnet-lib`](https://github.com/grafana/grafonnet-lib)
 * [`grafana/jsonnet-libs`](https://github.com/grafana/jsonnet-libs)
   * consul-mixin
   * jaeger-mixin
