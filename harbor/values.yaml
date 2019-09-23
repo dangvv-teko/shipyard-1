@@ -38,3 +38,14 @@ expose:
 #     notaryServerDatabase: "notary_server"
 #     notarySignerDatabase: "notary_signer"
 #     sslmode: "disable"
+
+# redis:
+#   type: external
+#   external:
+#     host: "redis.host"
+#     port: "6379"
+#     # password: "redis-password"
+#     coreDatabaseIndex:        "0"
+#     jobserviceDatabaseIndex:  "1"
+#     registryDatabaseIndex:    "2"
+#     chartmuseumDatabaseIndex: "3"
