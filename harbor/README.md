@@ -33,19 +33,33 @@ helm upgrade pearl harbor/harbor \
 ```
 
 ### 2.3 Post-Installation
-1. Setup Authentication
-  * Using LDAP
-  ![Harbor LDAP](https://github.com/goharbor/harbor/raw/master/docs/img/ldap_auth.png)
+#### 2.3.1. Setup Authentication
+* Using LDAP
+![Harbor LDAP](https://github.com/goharbor/harbor/raw/master/docs/img/ldap_auth.png)
 
-  * Using OIDC
-  ![Harbor OIDC](https://github.com/goharbor/harbor/raw/master/docs/img/oidc_auth_setting.png)
-  
+* Using OIDC
+![Harbor OIDC](https://github.com/goharbor/harbor/raw/master/docs/img/oidc_auth_setting.png)
+
     Docker/Helm login using CLI secret
     ![OIDC CLI secret](https://github.com/goharbor/harbor/raw/master/docs/img/profile_dlg.png)
 
-2. Setup Email
+#### 2.3.2. Setup Email
 ![Harbor email setting](https://github.com/goharbor/harbor/raw/master/docs/img/new_config_email.png)
 
-3. Project Quota
+#### 2.3.3. Project Quota
+* Set default Project Quotas
 
-4. Tag Retention
+    Go to Configuration > Project Quotas.
+
+    ![Default Project Quotas](https://github.com/goharbor/harbor/raw/master/docs/img/project-quota2.png)
+
+    * Default artifact count per project: 2048
+    * Default disk space per project:     256 GB
+
+* Set Project Quotas for existed projects
+
+    ![Project Quotas](https://github.com/goharbor/harbor/raw/master/docs/img/project-quota4.png)
+
+#### 2.3.4. Tag Retention
+For each projects, define tag retention like:
+//TODO
