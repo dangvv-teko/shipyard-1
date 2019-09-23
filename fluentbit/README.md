@@ -13,14 +13,14 @@
 Fluent Bit Workflow:
 ![Fluent Bit Workflow](/fluentbit/res/workflow.png)
 
-## 1. Deployment
-### 1.1. Info
+## 2. Deployment
+### 2.1. Info
 * Kubernetes: v1.13+
 * Helm: v2.x
 * Fluent Bit: v1.2
   + Helm chart: v2.7
 
-### 1.2 Installation
+### 2.2 Installation
 ```bash
 helm install stable/fluent-bit \
   --name tivan-fluentbit \
