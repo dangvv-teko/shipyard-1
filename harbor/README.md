@@ -33,6 +33,9 @@ helm upgrade pearl harbor/harbor \
 ```
 
 ### 2.3 Post-Installation
+
+ref: [User Guide](https://github.com/goharbor/harbor/blob/master/docs/user_guide.md)
+
 #### 2.3.1. Setup Authentication
 * Using LDAP
 ![Harbor LDAP](https://github.com/goharbor/harbor/raw/master/docs/img/ldap_auth.png)
