@@ -25,7 +25,7 @@ The **Jaeger Operator** is an implementation of a Kubernetes Operator that used 
 ```bash
 helm install stable/jaeger-operator \
     --name=theseus \
-    --namespace=kube-tracing \
+    --namespace=kube-observability \
     --values=values.yaml
 ### or ###
 helm upgrade theseus stable/jaeger-operator \

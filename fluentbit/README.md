@@ -23,10 +23,10 @@ Fluent Bit Workflow:
 ### 2.2 Installation
 ```bash
 helm install stable/fluent-bit \
-  --name tivan-fluentbit \
-  --namespace kube-logging \
-  --values values.yaml
+  --name=tivan-fluentbit \
+  --namespace=kube-observability \
+  --values=values.yaml
 ## or ##
 helm upgrade tivan-fluentbit stable/fluent-bit \
-  --values values.yaml
+  --values=values.yaml
 ```

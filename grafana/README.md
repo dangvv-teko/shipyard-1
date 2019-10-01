@@ -16,11 +16,11 @@
 ### 1.2 Installation
 ```bash
 helm install stable/grafana \
-  --name grafana \
-  --namespace kube-monitor \
-  --values values.yaml
+  --name=griffin \
+  --namespace=kube-observability \
+  --values=values.yaml
 ## or ##
-helm upgrade grafana stable/grafana \
+helm upgrade griffin stable/grafana \
   --values values.yaml
 ```
 

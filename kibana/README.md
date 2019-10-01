@@ -19,12 +19,12 @@ helm repo add elastic https://helm.elastic.co
 helm repo update
 
 helm install elastic/kibana \
-  --name tivan-kibana \
-  --namespace kube-logging \
-  --values values.yaml
+  --name=tivan-kibana \
+  --namespace=kube-observability \
+  --values=values.yaml
 ## or ##
 helm upgrade tivan-kibana elastic/kibana \
-  --values values.yaml
+  --values=values.yaml
 ```
 
 ### 1.3 Post-installation

@@ -94,7 +94,7 @@ The default installation is intended to suit monitoring a kubernetes cluster the
 ```bash
 helm install stable/prometheus-operator \
     --name=argus \
-    --namespace=kube-monitor \
+    --namespace=kube-observability \
     --values=values.yaml
 ### or ###
 helm upgrade argus stable/prometheus-operator \
