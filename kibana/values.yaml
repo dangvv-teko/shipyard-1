@@ -4,12 +4,15 @@ priorityClassName: addons-critical
 # imageTag: 6.8.3
 
 elasticsearchHosts: http://elasticsearch.host:9200
+extraEnvs:
+- name: ELASTICSEARCH_USERNAME
+  value: kibana
+- name: ELASTICSEARCH_PASSWORD
+  value: supersecret
 kibanaConfig:
   kibana.yml: |
     # Suppress all access logging other than error messages
     logging.quiet: true
-    elasticsearch.username: kibana
-    elasticsearch.password: supersecret
 
 ingress:
   enabled: true
