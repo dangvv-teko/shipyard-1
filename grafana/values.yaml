@@ -41,13 +41,28 @@ grafana.ini:
 # notifiers: {}
 datasources:
   datasources.yaml:
+    # ref: https://grafana.com/docs/administration/provisioning/#datasources
     apiVersion: 1
     datasources:
     - name: Prometheus
       type: prometheus
-      url: http://prometheus:9090
+      url: http://prometheus.host:9090
       access: proxy
       isDefault: true
+    - name: ElasticSearch
+      type: elasticsearch
+      access: proxy
+      # basicAuth: true
+      # basicAuthUser:      logs-user
+      # basicAuthPassword:  logs-password
+      database: "[kubernetes_cluster-]YYYY.MM.DD"
+      url: http://elasticsearch.host:9200
+      jsonData:
+        interval:  Daily
+        timeField: "@timestamp"
+        esVersion: 70
+        logMessageField: log
+        logLevelField:   level
 # dashboardProviders: {}
 # dashboards: {}
 # dashboardsConfigMaps: {}
