@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: thanos-storage-config
+  namespace: kube-observability
+type: Opaque
+stringData:
+  thanos.yaml: |
+    type: GCS
+    config:
+      bucket: "thanos-metrics"
+      service_account: |-
+        {
+          "type": "service_account",
+          "project_id": "the-infinity-gauntlet",
+          "more_fields": "here..."
+        }

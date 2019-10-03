@@ -15,6 +15,13 @@ prometheus:
     # QUESTION: enable to Prometheus scrape globally???
     ruleSelectorNilUsesHelmValues: false
     serviceMonitorSelectorNilUsesHelmValues: false
+    thanos:
+      # Ref: https://github.com/coreos/prometheus-operator/blob/master/Documentation/api.md#thanosspec
+      baseImage: quay.io/thanos/thanos
+      version: v0.7.0
+      objectStorageConfig:
+        name: thanos-objstore-config
+        key:  thanos.yaml
 alertmanager:
   podDisruptionBudget:
     enabled: true
